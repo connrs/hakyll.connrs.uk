@@ -89,6 +89,8 @@ body {
   display: grid;
   gap: .5rem;
   grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
 }
 
 body>* {
@@ -102,6 +104,10 @@ header {
 }
 
 main {
+  padding: .5em;
+}
+
+footer {
   padding: .5em;
 }
 
@@ -150,5 +156,28 @@ nav.nav-main ul {
 nav.nav-main li {
   margin: 0;
   padding: 0;
-  line-height: 0;
+  vertical-align: middle;
+}
+
+nav.nav-main li a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+hgroup> :is(h1, h2, h3, h4)+p {
+  font-size: .8rem;
+}
+
+hgroup> :first-child {
+  margin-top: 0;
+}
+
+hgroup> :last-child {
+  margin-bottom: 0;
+}
+
+hgroup {
+  padding: 0 0 .5rem;
+  margin: 0 0 .5rem;
+  border-bottom: double 1px var(--accent-bcolor);
 }
