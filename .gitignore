@@ -41,3 +41,7 @@ cabal.project.local~
 .ghc.environment.*
 
 #endregion
+
+#region Hakyll
+_cache
+#endregion
