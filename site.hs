@@ -35,6 +35,10 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default-post.html" postCtx
             >>= relativizeUrls
 
+    match "CNAME" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     -- create ["posts.html"] $ do
     --     route idRoute
     --     compile $ do
@@ -82,5 +86,5 @@ main = hakyllWith config $ do
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
-    dateField "date" "%e %B, %Y" `mappend`
+    dateField "date" "%es %B, %Y" `mappend`
     defaultContext
