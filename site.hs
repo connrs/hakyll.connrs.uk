@@ -35,18 +35,32 @@ main = hakyllWith config $ do
             >>= loadAndApplyTemplate "templates/default-post.html" postCtx
             >>= relativizeUrls
 
-    create ["posts.html"] $ do
+    -- create ["posts.html"] $ do
+    --     route idRoute
+    --     compile $ do
+    --         posts <- recentFirst =<< loadAll "posts/*"
+    --         let archiveCtx =
+    --                 listField "posts" postCtx (return posts) `mappend`
+    --                 constField "title" "Posts"               `mappend`
+    --                 boolField "is_posts" (const True)        `mappend`
+    --                 defaultContext
+
+    --         makeItem ""
+    --             >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
+    --             >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+    --             >>= relativizeUrls
+
+    match "posts.html" $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
-            let archiveCtx =
+            let postsCtx =
                     listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Posts"               `mappend`
                     defaultContext
 
-            makeItem ""
-                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+            getResourceBody
+                >>= applyAsTemplate postsCtx
+                >>= loadAndApplyTemplate "templates/default.html" postCtx
                 >>= relativizeUrls
 
 
@@ -63,10 +77,10 @@ main = hakyllWith config $ do
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
 
-    match "templates/*" $ compile templateBodyCompiler
+    match ("templates/*" .||. "partials/*") $ compile templateBodyCompiler
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
+    dateField "date" "%e %B, %Y" `mappend`
     defaultContext

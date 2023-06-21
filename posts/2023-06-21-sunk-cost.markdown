@@ -1,0 +1,11 @@
+---
+title: Sunk cost
+author: connrs
+---
+Just kidding, this isn't a sunk cost. I was listening to a Youtube video recently and the present couldn't remember the phrase she wanted to use. I couldn't remember either until I was idly cooking one evening and remembered what it was.
+
+However, I'm fully buying in to doing static site generation now. I put it off forever because I really couldn't be bothered with setting it all up but I've reached the point now where I'm done with things not working and at least with this setup I can just bloody well edit some HTML if it really needs doing.
+
+Yes, I could have done it with Jekyll and I picked Hakyll anyway because Haskell.
+
+I hope they find that submarine btw. 😟

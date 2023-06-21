@@ -6,6 +6,7 @@
   --fgcolor: #dddddd;
   --link-fgcolor: #ffffff;
   --accent-bcolor: cyan;
+  --accent-sel-bcolor: magenta;
 }
 
 * {
@@ -162,6 +163,20 @@ nav.nav-main li {
 nav.nav-main li a {
   display: inline-block;
   vertical-align: middle;
+}
+
+nav.nav-main a.nav-active {}
+
+nav.nav-main a.nav-active:not(.icon-link, :hover),
+nav.nav-main a.nav-active:not(.icon-link, :focus),
+nav.nav-main a.nav-active:not(.icon-link, :focus-within) {
+  text-decoration: var(--accent-sel-bcolor) dashed underline 3px;
+}
+
+nav.nav-main a.nav-active:not(.icon-link):hover,
+nav.nav-main a.nav-active:not(.icon-link):focus,
+nav.nav-main a.nav-active:not(.icon-link):focus-within {
+  text-decoration: var(--accent-bcolor) dashed underline 3px;
 }
 
 hgroup> :is(h1, h2, h3, h4)+p {
