@@ -60,6 +60,10 @@ ol {
   margin: 0 0 0.5rem;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 a,
 [onclick] {
   cursor: pointer;
