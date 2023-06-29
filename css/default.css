@@ -1,4 +1,4 @@
-@import url(https://cdn.rawgit.com/tonsky/FiraCode/1.205/distr/fira_code.css);
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@6.2/distr/fira_code.css);
 
 :root {
   --bgcolor: #111111;
