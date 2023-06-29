@@ -2,7 +2,7 @@
 
 :root {
   --bgcolor: #111111;
-  --accent-bgcolor: #444444;
+  --accent-bgcolor: #181818;
   --fgcolor: #dddddd;
   --link-fgcolor: #ffffff;
   --accent-bcolor: cyan;
@@ -14,7 +14,7 @@
 }
 
 html {
-  background-color: var(--bgcolor);
+  background-color: var(--accent-bgcolor);
   color: var(--fgcolor);
   font-family: 'Fira Code', monospace;
   text-shadow: .0625em -.0625em 0 #000000;
@@ -104,11 +104,11 @@ body>* {
 }
 
 header {
-  background-color: var(--accent-bgcolor);
   padding: .5em .5em 2.5em;
 }
 
 main {
+  background-color: var(--bgcolor);
   padding: .5em;
 }
 
@@ -168,8 +168,6 @@ nav.nav-main li a {
   display: inline-block;
   vertical-align: middle;
 }
-
-nav.nav-main a.nav-active {}
 
 nav.nav-main a.nav-active:not(.icon-link, :hover),
 nav.nav-main a.nav-active:not(.icon-link, :focus),
