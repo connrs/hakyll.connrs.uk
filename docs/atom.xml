@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Posts</title>
+    <link href="http://connrs.uk/atom.xml" rel="self" />
+    <link href="http://connrs.uk" />
+    <id>http://connrs.uk/atom.xml</id>
+    <author>
+        <name>connrs</name>
+        
+        <email>me@connrs.uk</email>
+        
+    </author>
+    <updated>2023-06-21T00:00:00Z</updated>
+    <entry>
+    <title>Sunk cost</title>
+    <link href="http://connrs.uk/posts/2023-06-21-sunk-cost.html" />
+    <id>http://connrs.uk/posts/2023-06-21-sunk-cost.html</id>
+    <published>2023-06-21T00:00:00Z</published>
+    <updated>2023-06-21T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>Just kidding, this isn't a sunk cost. I was listening to a Youtube video recently and the present couldn't remember the phrase she wanted to use. I couldn't remember either until I was idly cooking one evening and remembered what it was.</p>
+<p>However, I'm fully buying in to doing static site generation now. I put it off forever because I really couldn't be bothered with setting it all up but I've reached the point now where I'm done with things not working and at least with this setup I can just bloody well edit some HTML if it really needs doing.</p>
+<p>Yes, I could have done it with Jekyll and I picked Hakyll anyway because Haskell.</p>
+<p>I hope they find that submarine btw. 😟</p>]]></summary>
+</entry>
+<entry>
+    <title>Hello World</title>
+    <link href="http://connrs.uk/posts/2023-06-20-hello-world.html" />
+    <id>http://connrs.uk/posts/2023-06-20-hello-world.html</id>
+    <published>2023-06-20T00:00:00Z</published>
+    <updated>2023-06-20T00:00:00Z</updated>
+    <summary type="html"><![CDATA[<p>Obligatory first post.</p>
+<p>Q.E.D.</p>]]></summary>
+</entry>
+
+</feed>

@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.List   (isSuffixOf)
-import           Data.Monoid (mappend)
+import           Data.List           (isSuffixOf)
+import           Data.Monoid         (mappend)
 import           Hakyll
-
-
+import           Hakyll.Web.Pandoc
+import           Text.Pandoc.Options
 --------------------------------------------------------------------------------
 
 config :: Configuration
@@ -24,13 +24,14 @@ main = hakyllWith config $ do
 
     match (fromList ["about.markdown", "contact.markdown"]) $ do
         route   $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ myPandocCompiler -- pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ pandocCompiler
+        compile $ myPandocCompiler -- pandocCompiler
+            >>= saveSnapshot "content"
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default-post.html" postCtx
             >>= relativizeUrls
@@ -83,8 +84,45 @@ main = hakyllWith config $ do
 
     match ("templates/*" .||. "partials/*") $ compile templateBodyCompiler
 
+
+    create ["atom.xml"] $ do
+        route idRoute
+        compile $ do
+            let feedCtx = postCtx `mappend` bodyField "description"
+            posts <- fmap (take 10) . recentFirst =<<
+                loadAllSnapshots "posts/*" "content"
+            renderAtom myFeedConfiguration feedCtx posts
+
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
     dateField "date" "%es %B, %Y" `mappend`
     defaultContext
+
+myFeedConfiguration :: FeedConfiguration
+myFeedConfiguration = FeedConfiguration
+    { feedTitle       = "Posts"
+    , feedDescription = "A list of my most recent posts"
+    , feedAuthorName  = "connrs"
+    , feedAuthorEmail = "me@connrs.uk"
+    , feedRoot        = "http://connrs.uk"
+    }
+
+myHakyllWriterOptions :: WriterOptions
+myHakyllWriterOptions = defaultHakyllWriterOptions { writerExtensions = myHakyllWriterExtensions }
+
+myHakyllWriterExtensions :: Extensions
+myHakyllWriterExtensions =
+    let def = writerExtensions defaultHakyllWriterOptions
+    in disableExtension Ext_smart def
+
+myHakyllReaderOptions :: ReaderOptions
+myHakyllReaderOptions = defaultHakyllReaderOptions { readerExtensions = myHakyllReaderExtensions }
+
+myHakyllReaderExtensions :: Extensions
+myHakyllReaderExtensions =
+    let def = readerExtensions defaultHakyllReaderOptions
+    in disableExtension Ext_smart def
+
+myPandocCompiler :: Compiler (Item String)
+myPandocCompiler = pandocCompilerWith myHakyllReaderOptions myHakyllWriterOptions
