@@ -96,7 +96,7 @@ main = hakyllWith config $ do
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
-    dateField "date" "%es %B, %Y" `mappend`
+    dateField "date" "%e %B, %Y" `mappend`
     defaultContext
 
 myFeedConfiguration :: FeedConfiguration
