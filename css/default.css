@@ -100,7 +100,11 @@ body {
 
 body>* {
   grid-column: span 24;
+}
 
+body>*>* {
+  margin: 0 auto;
+  max-width: 60rem;
 }
 
 header {
