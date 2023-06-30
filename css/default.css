@@ -60,6 +60,14 @@ ol {
   margin: 0 0 0.5rem;
 }
 
+h2,
+h3,
+h4 {
+  font-family: Georgia, serif;
+  letter-spacing: -0.03rem;
+  word-spacing: -0.03rem;
+}
+
 ul {
   list-style-position: inside;
 }
