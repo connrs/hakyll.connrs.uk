@@ -64,8 +64,8 @@ h2,
 h3,
 h4 {
   font-family: Georgia, serif;
-  letter-spacing: -0.03rem;
-  word-spacing: -0.03rem;
+  letter-spacing: 0.06rem;
+  word-spacing: 0.06rem;
 }
 
 ul {
