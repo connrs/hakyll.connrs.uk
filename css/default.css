@@ -5,6 +5,7 @@
   --accent-bgcolor: #181818;
   --fgcolor: #dddddd;
   --link-fgcolor: #ffffff;
+  --link-fgcolor2: #ffff00;
   --accent-bcolor: cyan;
   --accent-sel-bcolor: magenta;
 }
@@ -82,6 +83,10 @@ a {
   text-decoration: none;
 }
 
+main a {
+  color: var(--link-fgcolor2);
+}
+
 a:not(.icon-link):hover,
 a:not(.icon-link):focus,
 a:not(.icon-link):focus-within {
@@ -96,6 +101,45 @@ a.icon-link {
 a.icon-link:hover,
 a.icon-link:focus {
   outline: dashed 3px var(--accent-bcolor);
+}
+
+figure {
+  background-color: var(--accent-bgcolor);
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: .25rem 1.25rem 1rem;
+}
+
+figure> :first-child {
+  margin-top: 0;
+}
+
+figure> :last-child {
+  margin-bottom: 0;
+}
+
+figure>blockquote {
+  margin-top: 0;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+figure>blockquote> :first-child:before {
+  content: '“';
+  font-size: 3rem;
+  vertical-align: middle;
+}
+
+/*figure>blockquote> :last-child:after {
+  content: '”';
+  font-size: 3rem;
+  vertical-align: text-top;
+}*/
+
+figure>blockquote+figcaption {
+  font-style: italic;
+  font-size: .9rem;
 }
 
 body {
