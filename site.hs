@@ -106,8 +106,8 @@ myFeedConfiguration =
         { feedTitle = "Posts"
         , feedDescription = "A list of my most recent posts"
         , feedAuthorName = "connrs"
-        , feedAuthorEmail = "me@connrs.uk"
-        , feedRoot = "http://connrs.uk"
+        , feedAuthorEmail = "me@conn.rs"
+        , feedRoot = "http://conn.rs"
         }
 
 myHakyllWriterOptions :: WriterOptions

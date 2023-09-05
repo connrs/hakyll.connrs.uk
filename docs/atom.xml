@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Posts</title>
-    <link href="http://connrs.uk/atom.xml" rel="self" />
-    <link href="http://connrs.uk" />
-    <id>http://connrs.uk/atom.xml</id>
+    <link href="http://conn.rs/atom.xml" rel="self" />
+    <link href="http://conn.rs" />
+    <id>http://conn.rs/atom.xml</id>
     <author>
         <name>connrs</name>
         
-        <email>me@connrs.uk</email>
+        <email>me@conn.rs</email>
         
     </author>
     <updated>2023-08-14T00:00:00Z</updated>
     <entry>
     <title>Sha</title>
-    <link href="http://connrs.uk/posts/2023-08-14-sha" />
-    <id>http://connrs.uk/posts/2023-08-14-sha</id>
+    <link href="http://conn.rs/posts/2023-08-14-sha" />
+    <id>http://conn.rs/posts/2023-08-14-sha</id>
     <published>2023-08-14T00:00:00Z</published>
     <updated>2023-08-14T00:00:00Z</updated>
     <summary type="html"><![CDATA[<p>Bram Moolenaar created <a href="https://vim.org">Vim</a>. He also cared deeply about children in Uganda. So much so that vim users were reminded of this each and every time they opened vim. I hope that this never changes.</p>
@@ -37,8 +37,8 @@ Xander - <cite>BtVS S06E22</cite>
 </entry>
 <entry>
     <title>Oh, they found the submarine</title>
-    <link href="http://connrs.uk/posts/2023-07-19-oh-they-found-the-submarine" />
-    <id>http://connrs.uk/posts/2023-07-19-oh-they-found-the-submarine</id>
+    <link href="http://conn.rs/posts/2023-07-19-oh-they-found-the-submarine" />
+    <id>http://conn.rs/posts/2023-07-19-oh-they-found-the-submarine</id>
     <published>2023-07-19T00:00:00Z</published>
     <updated>2023-07-19T00:00:00Z</updated>
     <summary type="html"><![CDATA[<p>😟 They found the submarine. I mean, tax the fucking fuck out of billionaires but damn that's not how I'd want anyone to go.</p>
@@ -46,8 +46,8 @@ Xander - <cite>BtVS S06E22</cite>
 </entry>
 <entry>
     <title>Sunk cost</title>
-    <link href="http://connrs.uk/posts/2023-06-21-sunk-cost" />
-    <id>http://connrs.uk/posts/2023-06-21-sunk-cost</id>
+    <link href="http://conn.rs/posts/2023-06-21-sunk-cost" />
+    <id>http://conn.rs/posts/2023-06-21-sunk-cost</id>
     <published>2023-06-21T00:00:00Z</published>
     <updated>2023-06-21T00:00:00Z</updated>
     <summary type="html"><![CDATA[<p>Just kidding, this isn't a sunk cost. I was listening to a Youtube video recently and the present couldn't remember the phrase she wanted to use. I couldn't remember either until I was idly cooking one evening and remembered what it was.</p>
@@ -57,8 +57,8 @@ Xander - <cite>BtVS S06E22</cite>
 </entry>
 <entry>
     <title>Hello World</title>
-    <link href="http://connrs.uk/posts/2023-06-20-hello-world" />
-    <id>http://connrs.uk/posts/2023-06-20-hello-world</id>
+    <link href="http://conn.rs/posts/2023-06-20-hello-world" />
+    <id>http://conn.rs/posts/2023-06-20-hello-world</id>
     <published>2023-06-20T00:00:00Z</published>
     <updated>2023-06-20T00:00:00Z</updated>
     <summary type="html"><![CDATA[<p>Obligatory first post.</p>
