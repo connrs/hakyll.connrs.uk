@@ -107,6 +107,15 @@ main = hakyllWith config $ do
       makeItem ""
         >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
 
+  create ["robots.txt"] $ do
+    route idRoute
+    compile $ do
+      let sitemapCtx = constField "root" root
+
+      -- make the item and apply our sitemap template
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/robots.txt" sitemapCtx
+
 --------------------------------------------------------------------------------
 -- postCtx :: Context String
 -- postCtx =
@@ -118,6 +127,9 @@ postCtx =
     [ dateField
         "date"
         "%e %B, %Y"
+    , dateField
+        "date_ymd"
+        "%Y-%m-%d"
     , niceUrlField
         "url"
     , defaultContext
@@ -131,7 +143,7 @@ myFeedConfiguration =
     , feedDescription = "A list of my most recent posts"
     , feedAuthorName = "connrs"
     , feedAuthorEmail = "me@conn.rs"
-    , feedRoot = "http://conn.rs"
+    , feedRoot = root
     }
 
 myHakyllWriterOptions :: WriterOptions
