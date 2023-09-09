@@ -1,0 +1,3 @@
+/*
+  Content-Security-Policy: default-src 'self' data: 'unsafe-inline'; script-src 'self' data: 'unsafe-inline' 'unsafe-hashes' 'unsafe-eval' static.cloudflareinsights.com; script-src-elem 'self' data: 'unsafe-inline' 'unsafe-hashes' 'unsafe-eval'; script-src-attr 'self' data: 'unsafe-inline' 'unsafe-hashes' 'unsafe-eval'; style-src 'self' data: 'unsafe-inline' 'unsafe-hashes'; img-src * 'self' data:; font-src * 'self' data:; connect-src 'self' cloudflareinsights.com; media-src * 'self'; object-src 'self'; prefetch-src * 'self'; child-src 'self'; frame-src 'self'; worker-src 'self'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-contentt
+  Access-Control-Allow-Origin: *
