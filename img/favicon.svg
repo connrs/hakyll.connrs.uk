@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="2.0" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .trunk {
+        fill: #EFEFEF;
+        stroke: #000000;
+      }
+
+      .marks {
+        stroke: #000000;
+        stroke-width: 2;
+      }
+    </style>
+  </defs>
+  <rect width="256" height="256" fill="#FFFFFF" />
+  <path d="
+    M 16 0 C 16 64 16 224 8 256
+    L 56 256 C 48 224 48 64 48 0
+
+    " class="trunk" />
+  <line x1="16" y1="16" x2="24" y2="16" class="marks" />
+</svg>
