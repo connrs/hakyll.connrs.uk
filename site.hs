@@ -26,6 +26,10 @@ main = hakyllWith config $ do
     route idRoute
     compile compressCssCompiler
 
+  match "fonts/**" $ do
+    route idRoute
+    compile copyFileCompiler
+
   match (fromList ["about.markdown", "contact.markdown", "404.markdown"]) $ do
     route $ setExtension "html"
     compile
