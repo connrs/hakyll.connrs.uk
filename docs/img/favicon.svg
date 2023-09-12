@@ -3,20 +3,23 @@
     <style>
       .trunk {
         fill: #FAFAFA;
-        # 505050 stroke: #000000;
+        /* 505050 */
+        stroke: #000000;
       }
 
       .marks {
         stroke: #000000;
-        stroke-width: 2;
+        stroke-width: 1.5;
       }
     </style>
   </defs>
+  <rect rx="0" ry="0" width="256" height="256" fill="#ff00ff" />
   <g id="t1" transform="translate(16 0)">
     <path d="M 16 0 C 16 64 16 224 8 256 L 56 256 C 48 224 48 64 48 0" class="trunk" />
     <line x1="16" y1="16" x2="24" y2="16" class="marks" />
     <line x1="23" y1="39" x2="44" y2="40" class="marks" />
     <line x1="40" y1="29" x2="48" y2="30" class="marks" />
+    <line x1="43" y1="89" x2="48.5" y2="90" class="marks" />
   </g>
   <g id="t2" transform="translate(94 0)">
     <path d="M 16 0 L 8 256 L 48 256 L 56 0" class="trunk" />
@@ -26,4 +29,4 @@
     <path d="M 16 0 L 16 32 C 8 88 24 160 16 224 L 16 256 L 48 256 L 48 0" class="trunk" />
     <line x1="16" y1="16" x2="24" y2="16" class="marks" />
   </g>
-</svg>>
+</svg>
